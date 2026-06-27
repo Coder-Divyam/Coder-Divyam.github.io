@@ -24,15 +24,36 @@ nav {
     padding: 12px;
     border-radius: 10px;
     margin-bottom: 20px;
+
+    /* ✨ animation magic */
+    animation: dropIn 0.6s ease-out;
 }
 
+/* links */
 nav a {
     color: #38bdf8;
     margin-right: 15px;
     text-decoration: none;
     font-weight: bold;
+
+    transition: all 0.25s ease;
 }
 
+/* hover glow effect */
 nav a:hover {
     color: #a78bfa;
+    text-shadow: 0 0 8px #a78bfa;
+    transform: translateY(-2px);
+}
+
+/* ✨ entrance animation */
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
